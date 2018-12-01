@@ -1,7 +1,7 @@
-openshift-jee-sample
+study abroad
 ====================
 
-A sample app to be deployed on openshift environments
+School project.
 
-Note: to build this repository with maven you must specify "-Popenshift", eg "mvn clean package -Popenshift"
+
 
