@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>study-abroad</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+	<res-ref-name>jdbc/study-abroad</res-ref-name>
+	<res-type>javax.sql.DataSource</res-type>
+	<res-auth>Container</res-auth>
+	</resource-ref>
+
+
+<context-param> 
+   <description>Location to store uploaded file. Edit if you store on cloud</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+      C:\Users\007\Eclipse_workspace\study-abroad\WebContent\img\
+   </param-value> 
+</context-param>
+	
+	<filter>
+    <filter-name>AuthenticationFilter</filter-name>
+    <filter-class>com.filters.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthenticationFilter</filter-name>
+    <url-pattern>/content_editor.jsp</url-pattern>
+    <url-pattern>/content_editor_post.jsp</url-pattern>
+    <url-pattern>/content_manager_article.jsp</url-pattern>
+    <url-pattern>/content_manager_articles.jsp</url-pattern>
+    <url-pattern>/edit_article.jsp</url-pattern>
+    <url-pattern>/edit_post.jsp</url-pattern>
+    <url-pattern>/add_article.jsp</url-pattern>
+  </filter-mapping>
+</web-app>

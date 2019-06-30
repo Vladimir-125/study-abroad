@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource 
+	name="jdbc/study-abroad" 
+	auth="Container"
+	type="javax.sql.DataSource" 
+	maxTotal="100" 
+	maxIdle="70" 
+	maxWaitMillis="10000"
+	username="root" 
+	password=""
+	driverClassName="com.mysql.jdbc.Driver"
+	url="jdbc:mysql://127.0.0.1:3306/AWPDB"/>
+<!--  <Manager className='org.apache.catalina.session.PersistentManager'
+                saveOnRestart='false'
+                maxActiveSessions='5'
+                minIdelSwap='0'
+                maxIdleSwap='1'
+                maxInactiveInterval='600'
+                maxIdleBackup='0'>
+   <Store className='org.apache.catalina.session.FileStore'/>
+</Manager>
+-->
+<Manager pathname="">
+      <saveOnRestart>false</saveOnRestart>
+</Manager> 
+
+</Context>
